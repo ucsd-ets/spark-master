@@ -14,12 +14,4 @@ RUN wget -O /tmp/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-lat
 ENV PATH=$PATH:/opt/conda/bin
 COPY base.yml /tmp
 RUN conda env update --file /tmp/base.yml
-# RUN conda install cudatoolkit=10.1 \
-# 				  cudnn \
-# 				  nccl \
-#                   python=3.8 \
-#                   numpy \
-#                   pip \
-# 				  -y
-
 RUN conda init bash
