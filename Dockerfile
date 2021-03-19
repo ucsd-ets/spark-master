@@ -13,10 +13,12 @@ RUN wget -O /tmp/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-lat
 
 ENV PATH=$PATH:/opt/conda/bin
 COPY base.yml /tmp
-RUN conda env update --file /tmp/base.yml
-RUN conda init bash
+RUN conda env update --file /tmp/base.yml && \
+    conda init bash
 
 RUN /opt/conda/bin/pip3 install jupyter_core nbgrader==0.6.1 && \
     /opt/conda/bin/jupyter nbextension install --symlink --sys-prefix --py nbgrader && \
     /opt/conda/bin/jupyter nbextension enable --sys-prefix --py nbgrader && \
     /opt/conda/bin/jupyter serverextension enable --sys-prefix --py nbgrader
+
+USER $NB_USER
