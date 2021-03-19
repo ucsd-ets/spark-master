@@ -1,0 +1,19 @@
+name: base
+channels:
+  - defaults
+  - conda-forge
+  - anaconda
+dependencies:
+- cudatoolkit=10.1
+- cudnn
+- nccl
+- python=3.8
+- numpy
+- pip
+- pandas
+- matplotlib
+- seaborn
+- tensorflow-gpu
+- xgboost
+- pyspark
+- jupyter
