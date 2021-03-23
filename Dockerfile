@@ -22,6 +22,7 @@ RUN /opt/conda/bin/pip3 install jupyter_core nbgrader==0.6.1 && \
     /opt/conda/bin/jupyter serverextension enable --sys-prefix --py nbgrader
 
 COPY spark-master /
-RUN chmod 755 /spark-master
+RUN chmod 755 /spark-master && \
+    /opt/conda/bin/pip3 install jupyterhub==0.9.2
 
 USER $NB_USER
