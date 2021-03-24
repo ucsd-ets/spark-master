@@ -7,7 +7,7 @@ dependencies:
 - cudatoolkit=10.1
 - cudnn
 - nccl
-- python=3.8
+- python=3.7
 - numpy
 - pip
 - pandas
@@ -15,6 +15,5 @@ dependencies:
 - seaborn
 - tensorflow-gpu
 - xgboost
-- pyspark
 - jupyter
 - jupyterhub
