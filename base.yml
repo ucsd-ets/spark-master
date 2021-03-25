@@ -7,7 +7,7 @@ dependencies:
 - cudatoolkit=10.1
 - cudnn
 - nccl
-- python=3.7
+- python=3.6
 - numpy
 - pip
 - pandas
