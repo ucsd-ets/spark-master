@@ -35,5 +35,3 @@ RUN chmod 755 /spark-master /spark-worker && \
 
 RUN useradd spark -m
 
-RUN chown spark /etc/hosts
-#USER spark
