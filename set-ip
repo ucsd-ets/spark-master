@@ -1,0 +1,1 @@
+export SPARK_LOCAL_IP=$(ip a | grep inet | echo $(tail -1) | cut -d ' ' -f2 | cut -d '/' -f1)
