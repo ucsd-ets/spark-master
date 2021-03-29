@@ -33,5 +33,5 @@ COPY spark-master /
 RUN chmod 755 /spark-master /spark-worker && \
     /opt/conda/bin/pip3 install jupyterhub==0.9.2 pyspark==2.4.4
 
-RUN useradd spark -m
-
+RUN useradd spark -m && \
+    chown -R spark:spark /home/spark
