@@ -16,4 +16,4 @@ dependencies:
 - tensorflow-gpu
 - xgboost
 - jupyter
-- jupyterhub
+- ipyleaflet
