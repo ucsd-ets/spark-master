@@ -4,7 +4,7 @@
 
 echo "$(hostname -i) spark-master" >> /etc/hosts
 
-cd /home
+cd /home/$(whoami)
 export PYSPARK_DRIVER_PYTHON_OPTS="notebook --NotebookApp.token=$JUPYTER_TOKEN --NotebookApp.password=$JUPYTER_TOKEN --ip 0.0.0.0"
 pyspark --driver-memory 4G --executor-memory 6G --executor-cores 2
 
