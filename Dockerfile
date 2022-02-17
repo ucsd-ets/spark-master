@@ -1,8 +1,7 @@
 FROM scnakandala/dsc102-pa2-spark:latest
 
 RUN apt-get update && \
-    apt-get install python3.8 \
-		    git \
+    apt-get install git \
                     iputils-ping \
                     dnsutils \
                     wget -y
